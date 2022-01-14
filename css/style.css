@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/*CUSTOME PROPERTIES*/
+:root{
+    --padding-container:100px 0;
+    --color-title: #001A49;
+}
+.nom{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.btn{
+    margin-bottom: 15px;
+}
+.li{
+    list-style: none;
+}
+.subtitle{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.basura{
+    cursor: pointer;
+}
+.actua{
+    cursor: pointer;
+}
+.validacion{
+    color: brown;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    /*El contenido ocupara el 90% de la página*/
+    width: 90%;
+    /*Ancho*/
+    max-width: 1200px;
+    /*Verticalmente*/
+    margin: 0 auto;
+    /*El elemento se escondera*/
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+.hero{
+    width: 100%;
+    /*Alto del encabezado*/
+    height: 100vh;
+    /*Alto minimo*/
+    min-height: 600px;
+    /*Alto máximo*/
+    max-height:800px;
+    /*El contenido se posiciona dentro del contenedor*/
+    position: relative;
+    /*Filas*/
+    display: grid;
+    /*La primera ocupara el 100% de la página*/
+    /*La segunda tomara el contenido sobrante */
+    grid-auto-rows:100px 1fr ;
+    color: #fff;
+}
+
+/*Seudo elemento*/
+.hero::before{
+    /*Contenido vacio*/
+    content: "";
+    /*Se posiciona dentro de hero*/
+    position: absolute;
+    /*Margenes de 0*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*Capa de transparencia a la imagen*/
+    background-image: linear-gradient(180deg, #0000008c 0%,  #0000008c 100%), url('../images/inicio2.jpg') ;
+    /*Se adapta al tamaño de la página*/
+    background-size: cover;
+    /*Forma del elemento con clippy*/
+    clip-path: polygon(0 0, 100% 0, 99% 80%, 50% 95%, 0 80%);
+    /*Muestra el contenido (ordena los elementos)*/
+    z-index: -1;
+}
+
+.nav{
+    --padding-container:0;
+    height: 100%;
+    /*Colocar elementos uno a lado del otro*/
+    display: flex;
+    align-items: center;
+}
+
+.nav_title{
+    /*Grosor de fuente mas delgado*/
+    font-weight: 300;
+}
+.nav_link{
+    /*Posiciona los enlaces del lado derecho*/
+    margin-left: auto;
+    /*Se quita el margen de las listas*/
+    padding: 0;
+    display: grid;
+    /*Se coloca una enfrente de la otra*/
+    grid-auto-flow: column;
+    /*Ocupando el maximo de su contenido*/
+    grid-auto-columns: max-content;
+    /*Espaciado*/
+    gap: 2em;
+}
+.nav_items{
+    list-style: none;
+}
+
+.nav_links{
+    color: #fff;
+    text-decoration: none;
+}
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+}
+.nav_img{
+    /*Coloca el contenido en bloques*/
+    display: block;
+    width: 30px;
+}
+.nav_close{
+    /*Oculta el logo de close*/
+    display: var(--show,none);
+}
+
+/*HERO CONTAINER*/
+
+.hero_container{
+    /*Ancho del contenedor de la seccion*/
+    max-width: 800px;
+    --padding-container:0;
+    /*Muestra los elementos uno detras del otro*/
+    display: grid;
+    /*Filas creadas de manera automatica ocupen solo el espacio necesario*/
+    grid-auto-rows: max-content;
+    align-content: center;
+    /*Espacio*/
+    gap: 1em;
+    /*Espacio superior*/
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero_title{
+    /*Tamaño de letra (titulo)*/
+    font-size: 3rem;
+}
+.hero_paragraph{
+    /*Margen inferior del parrafo*/
+    margin-bottom: 20px;
+}
+.cta{
+    /*LINK colocarlo dentro de un bloque*/
+    display: inline-block;
+    background-color: #2091F9;
+    /*Ocupara solo el espacio de su contenido*/
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    /*Espacio interno arriba, abajo y a los costados*/
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+
+/*ABOUT*/
+
+.about{
+    /*Elementos centrados*/
+    text-align: center;
+}
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about_paragraph{
+    /**/
+    line-height: 1.7;
+    text-align: initial;
+}
+.about_main{
+    /*Espacio superior de*/
+    padding-top:80px ;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    /*Repetira tantas columnas con un minimo de dimension de la
+    página de 260px */
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+.about_icons{
+    /*Se alinean uno después del otro*/
+    display: grid;
+    /*Espaciado*/
+    gap: 1em;
+    /*Cntrar horizontalmente*/
+    justify-items: center;
+    /*Ancho del contenido*/
+    width: 260px;
+    /*Todo lo que salga del elemento se oculte*/
+    overflow: hidden;
+    /*Centra el contenido*/
+    margin:0 auto ;
+}
+.about_icon{
+    /*Ancho de la imagen*/
+    width: 40px;
+}
+/*MINNUTO 41*/
+
+/*PRICE*/
+.price{
+    text-align: center;
+}
+.price_table{
+    /*Margen interno*/
+    padding-top: 60px;
+    /*Coloca los elementos uno enfrente del otro*/
+    display: flex;
+    /*Si los elementos no estan dentro se desborda*/
+    flex-wrap: wrap;
+    /*Espaciado*/
+    gap: 2.5em;
+    /*Coloca un espaciado equitativamente*/
+    justify-content: space-evenly;
+    align-items: center;
+}
+.price_element{
+    background-color: #E5E5F7;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    /*Custome properties*/
+    --color-plan:#696871;
+    --color-price:#1D293F;
+    --bg-cta:#fff;
+    --color-cta:#5454D4;
+    --color-items:#696871;
+}
+
+.price_element--best{
+    width: 370px;
+    padding: 60px 40px;
+    /*Custome properties*/
+    background-color: #4475a6;
+    --color-plan: rgb(255 255 255 / 75%);
+    --color-price:#fff;
+    --bg-cta:#6193c5;
+    --color-cta:#FFF;
+    --color-items:#FFF;
+}
+
+/*Nombre del contenido*/
+.price_name{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+/*Precio*/
+.price_price{
+    font-size: 1.5rem;
+    color: var(--color-price);
+}
+/*Descripcion del paquete*/
+.price_items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    /*Grosor de la letra*/
+    font-weight: 300;
+    /*Tamaño*/
+    font-size: 1.2rem;
+    /*Margen de abajo*/
+    margin-bottom: 50%;
+    color:var(--color-items);
+}
+.price_cta{
+    /*Ocupara todo el ancho*/
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--bg-cta);
+    font-weight: 600;
+    color: var(--color-cta);
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+}
+
+/*Lugares*/
+.testimony{
+    background-color: #E5E5F7;
+    
+}
+.testimony_container{
+    /*Cuadrícula de una sola columna*/
+    display: grid;
+    /*Elementos uno debajo del otro (3 apartado)*/
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    /*Verticalmente*/
+    align-items: center;
+    
+    
+    
+}
+
+.testimony_body{
+    display: grid;
+    /*2 columnas para el texto y la imagen*/
+    grid-template-columns: 1fr max-content ;
+    /*Contenido se mostrara en las esquinas*/
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    /*El contenido se muestra en la segunda 
+    columna y termina en la tercera*/
+    grid-column: 2/3;
+    /*Asi como en la primera fila y termina 
+    en la segunda*/
+    grid-row: 1/2;
+    opacity: 0;
+    /*Para que no puedas seleccionarlo*/
+    pointer-events: none;
+}
+.testimony_body--show{
+    /*Se dirige a la propiedad original*/
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+.testimony_img{
+    width: 250px;
+    height: 250px;
+    /*Forma un ovalo*/
+    border-radius: 50%;
+    /*Se ajusta al tamaño*/
+    object-fit: cover;
+    /*Posision de la imagen*/
+    object-position: 50% 70%;
+}
+.testimony_text{
+    /*Maximo ancho del elemento para que no pase de 
+    lo establecido*/
+    max-width: 700px;
+}
+.testimony_course{
+    background-color: royalblue;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+}
+.testimony_arrow{
+    width: 90%;
+    cursor: pointer;
+}
+
+/*REGISTRO DE USUARIOS*/
+.logotipo{
+    background-color: #4475a6;
+    text-align: center;
+}
+.logo{
+    width: 150px;
+}
+.subtitle{
+    text-align: center;
+}
+.container{
+    margin-top: 0;
+}
+.questions_container{
+    display: grid;
+    gap: 2em;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.questions_padding{
+    padding: 0;
+    transition: padding .3s;
+    /*Encapsula el contenido */
+    border: 1px solid#5454D4;
+    border-radius: 6px;
+}
+.questions_padding--add{
+    padding-bottom: 30px;
+}
+.questions_answer{
+    /*Estilo del título */
+    padding: 0 30px 0;
+    /*Oculta los elementos*/
+    overflow: hidden;
+    
+}
+.questions_title{
+    text-align: left;
+    /*Colocara el icono al final*/
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    color: var(--color-title);
+    justify-content: space-between;
+}
+.question_arrow{
+    /*Icono desplegable*/
+    border-radius: 50%;
+    background-color: var(--color-title);
+    /*ancho y altura*/
+    width: 25px;
+    height: 25px;
+    /*Altera sus dimensiones*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Alineación del ícono al final*/
+    align-self: flex-end;
+    margin-left: 10px;
+    /*Transición*/
+    transition: transform .3s;
+}
+.question_arrow--rotate{
+    transform: rotate(180deg);
+}
+
+/*FIREBASE*/
+.questions_show{
+    text-align: left;
+    height: 0;
+    transition: height .3s;
+}
+.questions_img{
+    display: block;
+}
+
+
+
+/*FOOTER*/
+.footer{
+    background-color: #1d293f;
+}
+.footer_title{
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.footer_title{
+    color: #fff;
+}
+.footer_container{
+    /*Coloca los elementos uno al lado del otro*/
+    display: flex;
+    /*Desplaza el contenido a las esquinas*/
+    justify-content: space-between;
+    align-items: center;
+    /*Borde inferior */
+    border-bottom: 1px solid #fff;
+    padding-bottom: 60px;
+}
+.nav--footer{
+    /*Margen interno*/
+    padding-bottom: 20px;
+    /*Coloca los elementos uno debajo del otro*/
+    display: grid;
+    gap: 1em;
+    /*Agregar filas automaticamente*/
+    grid-auto-flow: row;
+    height: 100%;
+}
+.nav_link--footer{
+    display: flex;
+    margin: 0;
+    margin-right: 20px;
+    /*Si el contenido ya no cabe se desborda*/
+    flex-wrap: wrap;
+}
+.footer_copy{
+    --pading-container:30px 0;
+    text-align: center;
+    color: #fff;
+}
+.footer_copyright{
+    font-weight: 300;
+}
+.footer_icons{
+    
+    margin-bottom: 10px;
+}
+.footer_img{
+    width: 30px;
+}
+.nav_close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+

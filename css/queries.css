@@ -1,0 +1,130 @@
+:root{
+    --padding-container:100px 0;
+    --color-title: #001A49;
+}
+@media (max-width:800px) {
+    .nav_menu{
+        display: block;
+    }
+    .nav_link--menu{
+        position: fixed;
+        background-color: #5b9ebb;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /*Elementos uno al lado del otro*/
+        display: flex;
+        /*Pero en forma de columnas*/
+        flex-direction: column;
+        /*Reparte el espacio equitativamente*/
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        /*No reconoce el mouse*/
+        pointer-events: none;
+        transition: .7s opacity ;
+    }
+    .nav_link--show{
+        --show: block;
+        opacity: 1;
+        pointer-events: unset;  
+    }
+
+    /*Adaptacion de dispositivos*/
+    .hero_title{
+    font-size: 2.5rem;
+    }
+    .about_main{
+        gap: 2em;
+    }
+    /*El ultimo elemento se posisionara en 
+    todo el contenido*/
+    .about_icons:last-of-type{
+        grid-column: 1/-1;
+    }
+    .testimony_container{
+        grid-template-columns: 30px 1fr 30px;
+    }
+    .testimony_body{
+        grid-template-columns: 1fr;
+        grid-template-rows:max-content max-content ;
+        gap: 3em;
+        justify-items: center;
+    }
+    .testimony_img{
+        width: 200px;
+        height: 200px;
+    }
+    .footer_container{
+        /*Su contenido se adaaptara*/
+        flex-wrap: wrap;
+    }
+    .nav--footer{
+        width: 100%;
+        justify-items: center;
+    }
+    .nav_link--footer{
+        /*Abarca el espacio disponible*/
+        width: 100%;
+        /*Reparte el espacio equitativamente*/
+        justify-content: space-evenly;
+        margin: 0;
+    }
+}
+
+@media (max-width:600px){
+    .hero_title{
+        /*Reduce tamaño de titulo*/
+        font-size: 2rem;
+        /*Reduce tamaño de subtitle*/
+    }
+    .hero_paragraph{
+        font-size: 1rem;
+    }
+    .subtitle{
+        font-size: 1.5rem;
+    }
+    .price_element{
+        width: 90%;
+    }
+    .price_element--best{
+        width: 90%;
+        /*Margen interno*/
+        padding: 40px;
+    }
+    .price_price{
+        font-size: 2rem;
+    }
+    .testimony{
+        --padding-container:  40px 0;
+    }
+    .testimony_container{
+        /*Crea 3 columnas para el contenido*/
+        grid-template-columns: 25px 1fr 25px;
+        gap: .9em;
+    }
+    .testimony_arrow{
+        width: 100%;
+    }
+    .testimony_course{
+        margin-top: 15px;
+    }
+    .questions_title{
+        font-size: 1rem;
+    }
+    .questions_answer{
+        margin:auto 0;
+        width: 100%;
+    }
+    .usuarios_registro{
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .agregar{
+        margin-top: 2rem;
+    }
+}
