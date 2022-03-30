@@ -1,20 +1,20 @@
 const firebaseConfig = {
 
-    apiKey: "AIzaSyAGqPsx3JCx_TelMxPlqt6qea4pM4P2Jdo",
-    
-    authDomain: "vue-crud-54ccb.firebaseapp.com",
-    
-    projectId: "vue-crud-54ccb",
-    
-    storageBucket: "vue-crud-54ccb.appspot.com",
-    
-    messagingSenderId: "822397294123",
-    
-    appId: "1:822397294123:web:68d2389dbba477f829fc6e",
-    
-    measurementId: "G-YXGK8YGZ1H"
-    
-    };
+    apiKey: "AIzaSyBUYJRXAQ2jjNWOn1NsWlwZAOxMyFDe7tc",
+  
+    authDomain: "proyecto-web-e699e.firebaseapp.com",
+  
+    projectId: "proyecto-web-e699e",
+  
+    storageBucket: "proyecto-web-e699e.appspot.com",
+  
+    messagingSenderId: "257726939942",
+  
+    appId: "1:257726939942:web:fb5427b5d991b1b05c77e7",
+  
+    measurementId: "G-NMS601VVJ4"
+  
+  };
     
     // Initialize Firebase
     
